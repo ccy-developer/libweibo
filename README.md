@@ -12,7 +12,7 @@ Functions & Features
 Version History
 =================
 
-V1.0.2 最初上线版本
+V1.0.2 版本
 -----------------
 
 > 修改getAuthorizeURL方法添加一个 $scope参数，默认为NULL
