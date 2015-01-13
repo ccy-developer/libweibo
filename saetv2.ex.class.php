@@ -188,7 +188,6 @@ class SaeTOAuthV2 {
 			$params['grant_type'] = 'authorization_code';
 			$params['code'] = $keys['code'];
 			$params['redirect_uri'] = $keys['redirect_uri'];
-			$params['scope'] = $keys['scope'];
 		} elseif ( $type === 'password' ) {
 			$params['grant_type'] = 'password';
 			$params['username'] = $keys['username'];
