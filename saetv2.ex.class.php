@@ -151,15 +151,17 @@ class SaeTOAuthV2 {
 	 *  - wap2.0		wap2.0页面		
 	 *  - js			js-sdk 专用 授权页面是弹窗，返回结果为js-sdk回掉函数		
 	 *  - apponweibo	站内应用专用,站内应用不传display参数,并且response_type为token时,默认使用改display.授权后不会返回access_token，只是输出js刷新站内应用父框架
-	 * @return array
+	 *  @param string $scope申请scope权限所需参数，可一次申请多个scope权限
+         *  @return array
 	 */
-	function getAuthorizeURL( $url, $response_type = 'code', $state = NULL, $display = NULL ) {
+	function getAuthorizeURL( $url, $response_type = 'code', $state = NULL, $display = NULL,$scope=null ) {
 		$params = array();
 		$params['client_id'] = $this->client_id;
 		$params['redirect_uri'] = $url;
 		$params['response_type'] = $response_type;
 		$params['state'] = $state;
 		$params['display'] = $display;
+		$params['scope'] = $scope;
 		return $this->authorizeURL() . "?" . http_build_query($params);
 	}
 
