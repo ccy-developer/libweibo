@@ -177,7 +177,7 @@ class SaeTOAuthV2 {
 	 *  - 当$type为token时： array('refresh_token'=>...)
 	 * @return array
 	 */
-	function getAccessToken( $type = 'code', $keys ) {
+	function getAccessToken( $type = 'code',$method='get', $keys ) {
 		$params = array();
 		$params['client_id'] = $this->client_id;
 		$params['client_secret'] = $this->client_secret;
@@ -196,7 +196,7 @@ class SaeTOAuthV2 {
 			throw new OAuthException("wrong auth type");
 		}
 
-		$response = $this->oAuthRequest($this->accessTokenURL(), 'POST', $params);
+		$response = $this->oAuthRequest($this->accessTokenURL(), $method, $params);
 		$token = json_decode($response, true);
 		if ( is_array($token) && !isset($token['error']) ) {
 			$this->access_token = $token['access_token'];
