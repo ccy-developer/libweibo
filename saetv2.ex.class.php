@@ -154,7 +154,7 @@ class SaeTOAuthV2 {
 	 *  @param string $scope申请scope权限所需参数，可一次申请多个scope权限
          *  @return array
 	 */
-	function getAuthorizeURL( $url, $response_type = 'code', $state = NULL, $display = NULL,$scope='all' ) {
+	function getAuthorizeURL( $url, $response_type = 'code', $state = NULL, $display = NULL,$scope=null ) {
 		$params = array();
 		$params['client_id'] = $this->client_id;
 		$params['redirect_uri'] = $url;
