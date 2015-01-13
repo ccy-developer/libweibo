@@ -1,16 +1,5 @@
 # Sina weibo php sdk.
 
-Version History
-=================
-
-v1.0.2 版本
---------------
-
-> 修改 getAuthorizeURL 方法 添加一个参数 $scope 默认 NULL
-
-v1.0.1 最初版本
---------------
-
 用于新浪微博开放平台的PHP SDK. 内含能直接使用的DEMO.
 
 SAE(Sina App Engine, http://sae.sina.com.cn )已内置SDK，不需要下载，使用前需要手工调用 require_once('saetv2.ex.class.php');
@@ -18,6 +7,15 @@ SAE(Sina App Engine, http://sae.sina.com.cn )已内置SDK，不需要下载，�
 
 更新
 -----
+
+v1.0.2 版本
+--------------
+
+> 修改 getAuthorizeURL 方法 添加一个参数 $scope 默认 NULL
+
+
+v1.0.1 最初版本
+--------------
 
 + 2013年2月20日 修改V2版一处notice
 + 2011年12月16日 修改V2版两处手误
